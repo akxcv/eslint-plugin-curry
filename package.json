@@ -1,0 +1,42 @@
+{
+  "name": "eslint-plugin-curry",
+  "version": "0.1.0",
+  "description": "ESLint plugin with advanced rules for currying",
+  "main": "index.js",
+  "repository": "github.com/akxcv/eslint-plugin-curry",
+  "author": "Alexander Komarov <ak@akxcv.com>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "curry",
+    "currying",
+    "arrow",
+    "parens",
+    "arrow-parens"
+  ],
+  "devDependencies": {
+    "eslint": "^3.0.0",
+    "lint-staged": "^3.4.1",
+    "mocha": "^3.3.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.2.2"
+  },
+  "peerDependencies": {
+    "eslint": "^3.0.0"
+  },
+  "scripts": {
+    "pre-commit": "pre-commit",
+    "test": "mocha test/"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
